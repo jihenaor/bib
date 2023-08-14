@@ -1,4 +1,3 @@
-import React from 'react';
 import { SwiperSlide } from 'swiper/react';
 import { Library } from '../../../domain/Library';
 

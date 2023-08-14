@@ -1,14 +1,11 @@
 
-import { Swiper } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper/core';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-import LibrarySlide from './LibrarySlide';
 import { libraries } from '../../../assets/data/libraries'; // Importa la lista de bibliotecas desde el archivo libraries.ts
 
-SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 function LibrariesSection() {
   return (
@@ -20,7 +17,28 @@ function LibrariesSection() {
         onSwiper={(swiper) => console.log(swiper)}
       >
         {libraries.map((library, index) => (
-          <LibrarySlide key={index} library={library} />
+    <SwiperSlide>
+    <div
+      className="swiper-slide box"
+      style={{ transition: 'transform 0.3s' }}
+    >
+      <div className="image">
+        <img src={library.imageSrc} alt="" />
+      </div>
+      <div className="content">
+        <h3>{library.title}</h3>
+        <p>{library.description}</p>
+        <a
+          href={library.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn gradient-Uaudi"
+        >
+          Ver
+        </a>
+      </div>
+    </div>
+  </SwiperSlide>
         ))}
       </Swiper>
     </section>
