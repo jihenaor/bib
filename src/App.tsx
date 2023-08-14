@@ -1,5 +1,5 @@
 import './App.css'
-import BlogsSection from './adapters/ui/components/Blogs'
+import LibrariesSection from './adapters/ui/components/Libraries'
 import DealSection from './adapters/ui/components/Deal'
 import FeaturedSection from './adapters/ui/components/Featured'
 import FooterSection from './adapters/ui/components/Footer'
@@ -12,6 +12,7 @@ import Navbar from './adapters/ui/components/Navbar'
 import NewsletterSection from './adapters/ui/components/Newsletter'
 import ReviewsSection from './adapters/ui/components/Reviews'
 import ArrivalsSection from './adapters/ui/components/arrivals'
+
 
 function App() {
 
@@ -27,7 +28,7 @@ function App() {
       <ArrivalsSection />
       <DealSection />
       <ReviewsSection />
-      <BlogsSection />
+      <LibrariesSection />
       <FooterSection />
     {/* <LoaderSection /> */}
     </>
